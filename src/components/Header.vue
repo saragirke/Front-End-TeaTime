@@ -1,99 +1,86 @@
 <template>
+  <div class="hero-image">
+    <div class="header">
+      <RouterLink to="/"
+        ><img src="../img/logo.png" alt="logo" class="logo"
+      /></RouterLink>
+      <ul id="navlist">
+        <li>
+          <a> <RouterLink to="/">HOME</RouterLink></a>
+        </li>
+        <li>
+          <a><RouterLink to="/tea">TEA</RouterLink></a>
+        </li>
+        <li>
+          <a><RouterLink to="/about">ABOUT</RouterLink></a>
+        </li>
+      </ul>
+    </div>
 
-
-<div class="hero-image">
-
-<!-- Simple Navigation Pattern -->
-<div class="header">
-    <RouterLink to="/"><img src="../img/logo.png" alt="logo" class="logo"></RouterLink>
-  <ul id="navlist">
-
-    <li><a> <RouterLink to="/">HOME</RouterLink></a></li>
-    <li><a><RouterLink to="/tea">TEA</RouterLink></a></li>
-    <li><a><RouterLink to="/about">ABOUT</RouterLink></a></li>
-  </ul>
-</div>
-
-<div class="hero-text">
-
-<img src="../img/TeaTime.png" alt="Logotype" class="pic">
+    <div class="hero-text">
+      <img src="../img/TeaTime.png" alt="Logotype" class="pic" />
+    </div>
   </div>
+</template>
 
-</div>
+<script>
+import { RouterLink } from "vue-router";
+export default {
+  components: {
+    RouterLink,
+  },
+};
+</script>
 
-    </template>
-    
-    <script>
-    import { RouterLink } from 'vue-router'
-    export default {
-        components: {
-            RouterLink
-        }
-
-
-    }
-
-    </script>
-    
-    <style scoped>
-
-body, html {
-    margin: 0px;
-    padding: 0px;
-    
+<style scoped>
+body,
+html {
+  margin: 0px;
+  padding: 0px;
 }
-
-
 
 .header {
-  background: #ffffffb0; 
+  background: #ffffffb0;
   height: 80px;
 }
-  .logo {
-    float:left;
-    margin:0;
-    height: 80%;
-  }
-  
-  #navlist {
-    float: right;
-  }
+.logo {
+  float: left;
+  margin: 0;
+  height: 80%;
+}
 
-    li {
-    display: inline;
-    list-style-type: square;
-    padding-right: 30px;
-    font-size: 20px;
-    font-family: Quicksand, sans-serif;
-    text-decoration: none;
+#navlist {
+  float: right;
+}
 
-    }
-      a:link{
-        line-height: 70px;
-        height: 75px;
-        text-decoration: none;
-        color:rgb(255, 255, 255);
-      }
+li {
+  display: inline;
+  list-style-type: square;
+  padding-right: 30px;
+  font-size: 20px;
+  font-family: Quicksand, sans-serif;
+  text-decoration: none;
+}
+a:link {
+  line-height: 70px;
+  height: 75px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
 
-      li:hover {
-font-weight: bolder;
-color:aquamarine;
-      }
+li:hover {
+  font-weight: bolder;
+  color: aquamarine;
+}
 
-      a:visited {
-        color:black;
-      }
-    
-
-
-
-
-
-
+a:visited {
+  color: black;
+}
 
 /* The hero image */
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/pic6.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/pic6.jpg");
   background-position: top;
   height: 20%;
   background-position: right center;
@@ -102,7 +89,6 @@ color:aquamarine;
   position: relative;
   padding-bottom: 27%;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-
 }
 
 .hero-text {
@@ -114,11 +100,8 @@ color:aquamarine;
   color: white;
 }
 
-.pic{
+.pic {
   width: 65%;
   height: auto;
-
 }
-
-    </style>
-
+</style>
