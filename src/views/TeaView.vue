@@ -174,7 +174,6 @@ export default {
         });
 
         const data = await resp.json();
-        
         this.getTea();
       }
     },

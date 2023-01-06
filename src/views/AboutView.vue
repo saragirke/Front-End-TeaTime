@@ -59,15 +59,19 @@
   
   @media screen and (max-width: 900px) {
     .row {
-      display: flex;
+    display: flex;
     flex-direction: column;
     width: 95%;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-   margin-bottom: 1%;
-   background-image: linear-gradient(to bottom, rgb(255, 255, 255), #f8eedb);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+      rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    margin-bottom: 1%;
+
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), #f8eedb);
   }
-    .column {
-      width: 95%;
-    }
+  .column {
+    width: 95%;
+    margin-left:10%;
+    margin-right:10%;
   }
+}
   </style>
