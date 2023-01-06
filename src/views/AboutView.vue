@@ -69,7 +69,7 @@
     background-image: linear-gradient(to bottom, rgb(255, 255, 255), #f8eedb);
   }
   .column {
-    width: 95%;
+    width: 75%;
     margin-left:10%;
     margin-right:10%;
   }
