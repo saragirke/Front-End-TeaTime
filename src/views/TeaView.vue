@@ -49,7 +49,6 @@ export default {
     AddTea,
   },
 
-  //Funktioner
   methods: {
     /*********************************************
  * GET
@@ -175,7 +174,7 @@ export default {
         });
 
         const data = await resp.json();
-        //Läs in vitaminer på nytt
+        
         this.getTea();
       }
     },
