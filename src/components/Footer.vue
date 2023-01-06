@@ -33,8 +33,8 @@
         <h1>Social Media</h1>
         <div class="sociallogos">
           <div class="logobox">
-            <a href="#" class="fa fa-instagram">GitHub</a><br />
-            <a href="#" class="fa fa-linkedin">LinkedIn</a>
+            <a href="https://github.com/saragirke">GitHub</a><br />
+            <a href="https://www.linkedin.com/in/sara-girke-12b140133/" class="fa fa-linkedin">LinkedIn</a>
           </div>
         </div>
       </div>
