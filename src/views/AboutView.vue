@@ -1,7 +1,6 @@
 <template>
   <h1>ABOUT</h1>
   <div class="row">
-
     <div class="column">
   <p>
    This page is an assignment for the course DT162G at miun university. The frontend-application is created as a single-page-application with Vue.  </p>
@@ -20,7 +19,7 @@
     font-family: Quicksand, sans-serif;
     text-align: center;
     font-size:40px;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
   }
   
   h2 {
