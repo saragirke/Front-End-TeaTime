@@ -17,6 +17,7 @@
       <input
         v-model="price" type="number" min="0" id="price" name="price" /><br /><br />
       <div id="error"></div>
+
       <input type="submit" class="sortBtn" value="ADD" />
     </form>
     <br /><br />
@@ -60,7 +61,6 @@ export default {
           headers: {
             Accept: "application/json",
             "Content-type": "application/json",
-            Authorization: "Bearer ",
           },
           body: JSON.stringify(TeaBody),
         });
@@ -78,8 +78,9 @@ export default {
         this.$emit("TeaAdded");
 
         document.getElementById("error").innerHTML = "<p" + "Product was added!" + "</p>";
-      } else {
-        document.getElementById("error").innerHTML ="<p>" +"Please enter all fields" + "</p>";
+      } 
+      else {
+       document.getElementById("error").innerHTML ="<p>" +"Please enter all fields" + "</p>";
       }
     },
   },

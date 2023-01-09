@@ -24,6 +24,7 @@
       </tr>
       <!-- v-for loop för att hämta dokuemnt -->
       <Tea @deleteTea="deleteTea(tea._id)" @updateTea="updateTea(tea._id)" v-for="tea in teas" :tea="tea" :key="tea._id"/>
+    <p id="msg"></p>
     </table>
   </div>
   <br />
@@ -59,7 +60,6 @@ export default {
         method: "GET",
         headers: {
           "Content-type": "application/json",
-          Authorization: "Bearer ",
         },
       });
 
@@ -77,7 +77,6 @@ export default {
         method: "GET",
         headers: {
           "Content-type": "application/json",
-          Authorization: "Bearer ",
         },
       });
 
@@ -100,7 +99,6 @@ export default {
         method: "GET",
         headers: {
           "Content-type": "application/json",
-          Authorization: "Bearer ",
         },
       });
 
@@ -123,7 +121,6 @@ export default {
         method: "GET",
         headers: {
           "Content-type": "application/json",
-          Authorization: "Bearer ",
         },
       });
 
@@ -144,7 +141,6 @@ export default {
         method: "GET",
         headers: {
           "Content-type": "application/json",
-          Authorization: "Bearer ",
         },
       });
 
@@ -169,7 +165,6 @@ export default {
           headers: {
             Accept: "application json",
             "Content-Type": "application/json",
-            Authorization: "Bearer ",
           },
         });
 
@@ -189,8 +184,8 @@ export default {
 
       //Kontrollera input
       if (
-        (teaname != 0) &
-        (teatype != 0) &
+        (teaname != "") &
+        (teatype != "") &
         (teaamount >= 0) &
         (teaprice != 0)
       ) {
@@ -205,19 +200,21 @@ export default {
         const resp = await fetch("http://localhost:3000/teas/" + _id, {
           method: "PUT",
           headers: {
-            Accept: "application/json",
+            "Accept": "application/json",
             "Content-type": "application/json",
-            Authorization: "Bearer ",
           },
           body: JSON.stringify(teaBody),
         });
 
         const data = await resp.json();
-        alert("Updated!");
+        this.$alert("Hello Vue Simple Alert.");
+
+
       } else {
-        alert("Enter all information");
+        alert("Field can't be empty");
       }
-    },
+    
+    }
   },
   mounted() {
     this.getTea();
