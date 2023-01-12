@@ -76,8 +76,6 @@ export default {
 
         //Emit för att ladda om sidan
         this.$emit("TeaAdded");
-
-        document.getElementById("error").innerHTML = "<p" + "Product was added!" + "</p>";
       } 
       else {
        document.getElementById("error").innerHTML ="<p>" +"Please enter all fields" + "</p>";

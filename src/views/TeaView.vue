@@ -184,10 +184,10 @@ export default {
 
       //Kontrollera input
       if (
-        (teaname != "") &
-        (teatype != "") &
-        (teaamount >= 0) &
-        (teaprice != 0)
+        teaname != 0 &
+        teatype != 0 &
+        teaamount >= 0 &
+        teaprice != 0
       ) {
         //Javascript objekt
         let teaBody = {
@@ -207,13 +207,13 @@ export default {
         });
 
         const data = await resp.json();
-        this.$alert("Hello Vue Simple Alert.");
-
+        this.getTea();
+        alert(teaname + " was updated!");
 
       } else {
         alert("Field can't be empty");
+        location.reload()
       }
-    
     }
   },
   mounted() {

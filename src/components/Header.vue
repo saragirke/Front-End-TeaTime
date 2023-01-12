@@ -18,7 +18,7 @@
     </div>
 
     <div class="hero-text">
-      <img src="../img/TeaTime.png" alt="Logotype" class="pic" />
+    <a><RouterLink to="/"><img src="../img/TeaTime.png" alt="Logotype" class="pic" /></RouterLink></a>
     </div>
   </div>
 </template>
