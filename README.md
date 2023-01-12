@@ -1,4 +1,4 @@
-#  Front-ends app for TeaTime (Project DT162G) :penguin:
+# :tea:  Front-ends app for TeaTime (Project DT162G) :tea:
 
 ## Project Setup
 
