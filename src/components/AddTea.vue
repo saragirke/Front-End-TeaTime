@@ -78,7 +78,7 @@ export default {
         this.$emit("TeaAdded");
       } 
       else {
-       document.getElementById("error").innerHTML ="<p>" +"Please enter all fields" + "</p>";
+       document.getElementById("error").innerHTML ="<p>" +"Please enter all information" + "</p>";
       }
     },
   },

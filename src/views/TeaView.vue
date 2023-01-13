@@ -24,7 +24,6 @@
       </tr>
       <!-- v-for loop för att hämta dokuemnt -->
       <Tea @deleteTea="deleteTea(tea._id)" @updateTea="updateTea(tea._id)" v-for="tea in teas" :tea="tea" :key="tea._id"/>
-    <p id="msg"></p>
     </table>
   </div>
   <br />
@@ -156,9 +155,9 @@ export default {
  * DELETE
  *********************************************/
     async deleteTea(_id) {
-      console.log(_id);
+
       //Bekräfta för att köra funktionen
-      if (confirm("Är du säker på att produkten ska raderas?")) {
+      if (confirm("Do you want to delete product " + teaname + "?")) {
         const resp = await fetch("http://localhost:3000/teas/" + _id, {
           //Deleteanrop
           method: "DELETE",
@@ -186,7 +185,7 @@ export default {
       if (
         teaname != 0 &
         teatype != 0 &
-        teaamount >= 0 &
+        teaamount != 0 &
         teaprice != 0
       ) {
         //Javascript objekt
