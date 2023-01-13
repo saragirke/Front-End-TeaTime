@@ -68,7 +68,7 @@ export default {
     },
 
   /*********************************************
- * Soretera efter lagerstatus
+ * Sortera  efter lagerstatus
  *********************************************/
     async sortAmount() {
       //Fetch till restwebbtjänst
@@ -90,7 +90,7 @@ export default {
     },
 
 /*********************************************
- * Soretra efter pris
+ * Sortera  efter pris
  *********************************************/
     async sortPrice() {
       //Fetch till restwebbtjänst
@@ -112,7 +112,7 @@ export default {
     },
 
    /*********************************************
- * Soretera efter namn
+ * Sortera  efter namn
  *********************************************/
     async sortName() {
       //Fetch till restwebbtjänst
@@ -132,7 +132,7 @@ export default {
     },
 
   /*********************************************
- * Soretera efter type
+ * Sortera efter type
  *********************************************/
     async sortLeaf() {
       //Fetch till restwebbtjänst
@@ -155,7 +155,7 @@ export default {
  * DELETE
  *********************************************/
     async deleteTea(_id) {
-
+      let teaname = document.getElementById("name" + _id).innerHTML;
       //Bekräfta för att köra funktionen
       if (confirm("Do you want to delete product " + teaname + "?")) {
         const resp = await fetch("http://localhost:3000/teas/" + _id, {
@@ -183,9 +183,9 @@ export default {
 
       //Kontrollera input
       if (
-        teaname != 0 &
-        teatype != 0 &
-        teaamount != 0 &
+        teaname != "" &
+        teatype != "" &
+        teaamount != "" &
         teaprice != 0
       ) {
         //Javascript objekt

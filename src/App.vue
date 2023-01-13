@@ -4,6 +4,7 @@
   <Header />
   <!-- Routerview känner på vilken sida vi står, vilken view skall visas-->
   <RouterView />
+    <!-- Importerar footer-->
   <Footer />
 </template>
 
